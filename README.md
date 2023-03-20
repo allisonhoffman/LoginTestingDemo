@@ -1,4 +1,11 @@
-# Unit Tests vs Automated UI Tests
+> **update 3/20/23:**   
+This project includes a mock sign-in screen built with SwiftUI and corresponding unit tests and UI tests built with XCTest/XCUITest. I'll use them to demonstrate the tutorial below. The tutorial text, demo app code, and test code are all works in progress! 
+
+
+
+
+
+## Unit Tests vs Automated UI Tests
 
 Here are two different types of automated tests: 
 
