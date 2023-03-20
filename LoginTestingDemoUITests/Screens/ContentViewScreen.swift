@@ -27,6 +27,11 @@ class ContentViewScreen {
         XCTAssertTrue(Self.loginButton.exists && Self.loginButton.isHittable)
     }
     
+    func enterEmail(_ email: String) {
+        Self.emailField.tap()
+        Self.emailField.typeText(email)
+    }
+    
     func enterValidEmail() {
         Self.emailField.tap()
         Self.emailField.typeText("email@domain.com")
@@ -35,6 +40,11 @@ class ContentViewScreen {
     func enterInvalidEmail() {
         Self.emailField.tap()
         Self.emailField.typeText("plainaddress")
+    }
+    
+    func enterPassword(_ password: String) {
+        Self.passwordField.tap()
+        Self.passwordField.typeText(password)
     }
     
     func enterValidPassword() {

@@ -38,6 +38,11 @@ final class LoginTestingDemoUITests: XCTestCase {
         let loginView = contentView.selectLogin()
         loginView.validateElements()
     }
+    
+    func testInvalidEmail() {
+        let contentView = ContentViewScreen()
+        contentView.enterEmail("")
+    }
 
 
 }

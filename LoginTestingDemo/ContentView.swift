@@ -50,6 +50,21 @@ struct ContentView: View {
                     .foregroundColor(.gray)
                     .padding(.top, 25)
                 
+                if !email.isEmpty || !password.isEmpty {
+                    if !email.isEmpty {
+                        if !self.isEmailValid(email) {
+                            Text("Invalid email format.")
+                                .accessibilityIdentifier("ContentView_invalidEmail_staticText")
+                        }
+                    }
+                    if !password.isEmpty {
+                        if !self.isPasswordValid(password) {
+                            Text("Invalid password format.")
+                                .accessibilityIdentifier("ContentView_invalidPassword_staticText")
+                        }
+                    }
+                }
+                
                 Spacer()
     
                 NavigationLink(destination: LoginView(), label: {
@@ -106,6 +121,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(email: "", password: "")
     }
 }
